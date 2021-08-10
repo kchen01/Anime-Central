@@ -17,7 +17,7 @@ How to run:
 
 _______________________________________________________________________________
 
-AUTHORS: Kevin Chen, James Marlin, Quoc Nguyen
+AUTHORS: Kevin Chen(kchen01), James Marlin(jamesmarlin), Quoc Nguyen(quocodile)
 
 DATA: A dataset consisting of animes that contains the anime's rating, name, # of episodes, etc
 
