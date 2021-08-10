@@ -1,0 +1,60 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>Anime Central</title>
+        {% block import %}
+        {% endblock %}
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='navbar.css') }}"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="margin-bottom: 50px;">
+	<div  class="container-fluid">
+		<div class="row" style="background-color: black;">
+			<div class="col-sm-1"></div>
+			<div id="site_id_container" class="col-sm-2">
+				<a href="/">ANIME CENTRAL</a>
+			</div>
+			<div class="col-sm-5" id="search_container" style="">
+				<form action="/search" method="post">
+                                        <select name="search_type" id="search_type">
+						<option value="title">title</option>	
+						<option value="genre">genre</option>
+					</select>
+					<input id="search_bar" type="text" name= "search_string">
+                                	<input id="search_btn" type= "submit" value="Search">
+				</form>
+			</div>
+			<div class="col-sm-3 p-0" style="height: 50px;">
+				<div id="user_related" >
+				{% if current_user.is_authenticated %}
+					<div id = "greeting">
+						{{ current_user.username }}
+					</div>
+					<a id="profile_link" href="/profile">
+						<button>Profile</button>
+					</a> 
+					<div id="logout_btn">
+						<form action="/api/logout">
+							<input type= "submit" value="Logout" style="">
+						</form>
+					</div>
+				{% else %}
+				<a id="signup_link" href="/signup">
+        				<button>Signup</button>
+				</a> 
+				<a id="login_link" href="/login">
+					<button style="">Login</button>
+				</a> 
+				{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+{% block content %}
+{% endblock %}
+
+</html>

@@ -1,0 +1,20 @@
+{% block import %}
+
+{% endblock %}
+<script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='profile.css') }}"/>
+{% extends "navbar.html" %}
+{% block content %}
+
+<div id = "welcome_message">
+	<p>Welcome, {{ name }}! </p>
+	<p>Here's your watchlist:</p>
+</div>
+
+<div id="watchlist">
+  {{watchlist | safe}}
+</div>
+
+{% endblock %}
+

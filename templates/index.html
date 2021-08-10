@@ -1,0 +1,59 @@
+{% extends "navbar.html" %}
+{% block import %}
+<script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+{% endblock %}
+
+{% block content %}
+
+<div id  = "all_genres">
+  <div class="container" style = "width: 80%;overflow: auto;">
+      <h2>Top Anime by Genre</h2>
+      <h3>Action</h3>
+      <div class = "row">
+        <button class="rightpaddle" id = "action_button_right"> > </button>
+        <button class="leftpaddle" id = "action_button_left"> < </button>
+        <div class="genre_container" id="genre_action"></div>
+      </div>
+      <h3>Horror</h3>
+      <div class = "row">
+        <button class="rightpaddle" id = "horror_button_right">></button>
+        <button class="leftpaddle" id = "horror_button_left"> < </button>
+        <div class="genre_container" id="genre_horror"></div>
+      </div>
+      <h3>Shounen</h3>
+      <div class = "row">
+        <button class="rightpaddle" id = "shounen_button_right">></button>
+        <button class="leftpaddle" id = "shounen_button_left"> < </button>
+        <div class="genre_container" id="genre_shounen"></div>
+      </div>
+      <h3>Drama</h3>
+      <div class = "row">
+        <button class="rightpaddle" id = "drama_button_right">></button>
+        <button class="leftpaddle" id = "drama_button_left"> < </button>
+        <div class="genre_container" id="genre_drama"></div>
+      </div>
+  
+      <h3>Romance</h3>
+      <div class = "row">
+        <button class="rightpaddle" id = "romance_button_right">></button>
+        <button class="leftpaddle" id = "romance_button_left"> < </button>
+        <div class="genre_container" id="genre_romance"></div>
+      </div>
+
+      <h3>Adventure</h3>
+      <div class = "row">
+        <button class="rightpaddle" id = "adventure_button_right">></button>
+        <button class="leftpaddle" id = "adventure_button_left"> < </button>
+        <div class="genre_container" id="genre_adventure"></div>
+      </div>
+
+      <h3>Comedy</h3>
+      <div class = "row">
+        <button class="rightpaddle" id = "comedy_button_right">></button>
+        <button class="leftpaddle" id = "comedy_button_left"> < </button>
+        <div class="genre_container" id="genre_comedy"></div>
+      </div>
+  </div>
+</div>
+{% endblock %}

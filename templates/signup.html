@@ -1,0 +1,34 @@
+{% block import %}
+<script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+{% endblock %}
+
+{% extends "navbar.html" %}
+
+{% block content %}
+<form method="POST" action="/api/signup">
+<div style="width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center;">
+    
+  <div>
+      <div style = "color: red;">
+        {{error}}
+      </div>
+    
+      <h3 style="text-align: center;">Sign Up</h3>
+  <div>
+	<div style="padding: 10px;">
+          <input type="text" name="username" placeholder="Username" autofocus="">
+        </div>
+        </div>
+        <div>
+          <div style="padding: 10px;">
+            <input type="password" name="password" placeholder="Password">
+          </div>
+        </div>
+        <button style="display: block; margin: auto;">Sign Up</button>
+    </div>
+</div>
+</form>
+<style>
+</style>
+{% endblock %}

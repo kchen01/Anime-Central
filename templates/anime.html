@@ -1,0 +1,64 @@
+{% extends 'navbar.html'%}
+
+{% block import %}
+<script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='anime.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='anime.css') }}"/>
+{% endblock %}
+ 
+{% block content %}
+<div class="container" style="width: 80%; margin-top: 75px;">
+    <div class="row">
+      <div class="col-lg-4">
+        <img id="anime_image" src='/{{ anime_data[0] }}' alt="{{ anime_data[1] }}" srcset="">
+      </div>
+      <div id="anime_data" class="col-lg-4">
+        <h1 id="anime_anime_name">{{ anime_data[1] }}</h1>
+        <div style="rating_data_container">
+          <h3 class="data_header">MyAnimeList Rating:</h3>
+          <h3 class="data_value">{{ anime_data[-1] }}</h3>
+        </div>
+        <div id="episode_data_container">
+          <h3 class="data_header">Episodes:</h3>
+          <h3 class="data_value">{{ anime_data[2] }}</h3>
+        </div>
+        {% if current_user.is_authenticated %}
+        <div style="margin-top: 20px;">
+        
+          {% if anime_exists == True %}
+          <form method='post' action="/api/remove/{{ anime_data[1] }}"> 
+            <input type='submit' id="watchlist_button" value="Remove from watchlist" style="padding: 5px;"/>
+          </form>
+          {% else %}
+          <form method='post' action="/api/add/{{ anime_data[1] }}" >
+            <input type='submit' id="watchlist_button" value="Add to watchlist" style="padding: 5px;"/>
+        </form>
+         {% endif %}
+        </div>
+      </div>
+      <div class="col-lg-4" style="height: 500px">
+        
+        <div id="stars_container">
+         
+        </div>
+        <div id="review_container">
+            <p id="review_label">write a review</p>
+            <div id="write_a_review_container">
+              <textarea id="write_a_review">
+              </textarea>
+            </div>
+            <div id="review_container_bottom">
+              <button id="submit_review_btn">
+                Submit
+              </button>
+            </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="row">
+      <h2>Reviews</h2>
+      {{reviews_html | safe}}
+    </div>
+</div>
+{% endblock %}

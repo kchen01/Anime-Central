@@ -1,0 +1,99 @@
+/*
+Kevin Chen, James Marlin, Quoc Nguyen
+*/
+
+/*index.html*/
+
+body {
+  margin: 3em;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#all_genres h2 {
+  font-weight: bold;	
+} 
+
+#animerec {
+  margin-left: 15px;
+
+}
+
+.container img{
+  width:  200px;
+  height: 300px;
+}
+
+button {
+  background-color: lightgrey;
+}
+
+#help{
+  margin-top: 75px;
+  margin-left: 15px;
+}
+
+#welcome_message{
+  margin-top: 75px;
+}
+
+.left-paddle {
+	left: 0;
+}
+.right-paddle {
+	right: 0;
+}
+
+.rightpaddle {
+  background-color: black;
+  color: white;
+  height: 402px;
+  width: 50px;
+  float: right;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.leftpaddle {
+  background-color: black;
+  color: white;
+  height: 402px;
+  font-size: 20px;
+  width: 50px;
+  float: left;
+  font-weight: bold;
+}
+
+.rightpaddle:hover {
+  background-color: white;
+  color: black;
+  font-size: 40px;
+  transition: 250ms color, 250ms background-color, 250ms font-size;
+}
+
+.leftpaddle:hover {
+  background-color: white;
+  color: black;
+  font-size: 40px;
+  transition: 250ms color, 250ms background-color, 250ms font-size;
+}
+
+.genre_container img {
+  border: 5px solid black;
+}
+
+.genre_container {
+  margin: auto;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: flex-start;
+  height: 402px;
+  border: 1px solid black;
+}
+
+
+
+

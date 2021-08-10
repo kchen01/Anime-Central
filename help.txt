@@ -1,0 +1,79 @@
+
+List the top 50 anime in each genre
+-
+REQUEST: /api/anime
+ 	
+	GET PARAMETERS:
+	genre -- (string) an anime genre
+
+-
+
+RESPONSE: JSON list containing anime dictionaries, with each dictionary containing the following fields:
+
+	anime_id -- (string) the id for the anime
+	anime_name -- (string) the name of the anime
+	num_episodes -- (string) number of episodes for the anime
+	genre -- (string) all the genres of the anime
+        pic -- (string) the path to an image file for the anime or an empty string if the pic does not exist
+__________________
+
+Search for anime
+-
+REQUEST: /api/search/search_type/search_string
+
+	search_type -- either title or genre
+	search_string -- the string used to search
+-
+
+RESPONSE: JSON list of dictionaries containing anime dictionaries, with each dictionary containing the following fields:
+
+	id -- (string) the id for the anime
+	name -- (string) the name of the anime
+	# episodes -- (string) the number of episodes for the anime
+	mal_rating -- (string) the rating of the anime on MyAnimeList
+
+________________
+
+Add to watchlist
+-
+REQUEST: /api/add/<anime_name>
+
+	anime_name: name of the anime to be added
+-
+
+RESPONSE: Redirect to that anime's page
+
+________________
+
+Remove from watchlist
+-
+REQUEST: /api/remove/<anime_name>
+
+	anime_name: name of the anime to be removed
+-
+
+RESPONSE: Redirect to that anime's page
+
+________________
+
+Login user
+REQUEST: /api/login
+RESPONSE: Redirect to that user's page
+
+________________
+
+Signup 
+REQUEST: /api/signup
+RESPONSE: Redirect to the login page
+
+________________
+
+Logout user
+REQUEST: /api/logout
+RESPONSE: Redirect to the home page
+
+________________
+
+Add review
+REQUEST: /api/add/review
+RESPONSE: Indication that the review has been successfully added to the database
