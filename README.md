@@ -1,19 +1,19 @@
 # Anime Central
 
-## Homepage:
+### Homepage:
 <img width="1440" alt="Screen Shot 2021-11-16 at 7 30 12 PM" src="https://user-images.githubusercontent.com/52056529/142127763-79662570-f597-4ef3-b8fe-e269a47b1eec.png">
 
-## Search result example:
+### Search result example:
 <img width="1440" alt="Screen Shot 2021-11-16 at 7 31 02 PM" src="https://user-images.githubusercontent.com/52056529/142127811-8f374150-4b69-4af9-8748-1f7919721d88.png">
 
-## Individual anime page example
+### Individual anime page example:
 <img width="1440" alt="Screen Shot 2021-11-16 at 7 31 47 PM" src="https://user-images.githubusercontent.com/52056529/142127823-3cff87e8-c628-4b0b-9086-43c24de9ae96.png">
 
-## User watchlist example
+### User watchlist example:
 <img width="1440" alt="Screen Shot 2021-11-16 at 7 32 09 PM" src="https://user-images.githubusercontent.com/52056529/142127864-03bf4914-67d6-40c0-9906-ad0103b06bfe.png">
 
-
-How to run:
+---
+### How to run:
 
 1. Install PostgresSQL on your computer(via Homebrew or directly from website)
 
